@@ -92,5 +92,5 @@ stages:
               IISDeploymentType: 'IISWebsite'
               ActionIISWebsite: 'CreateOrUpdateWebsite'
               WebsiteName: 'MyDotNetApp'  # <-- Customize as needed
-              WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot\MyDotNetApp'
+              WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot\App'
               WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
