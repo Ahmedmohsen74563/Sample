@@ -80,6 +80,7 @@ stages:
               targetPath: '$(Pipeline.Workspace)/deploy'
 
           # ✅ Deploy the web app package using IISWebAppDeploymentOnMachineGroup
+          # deploy a web application package (ZIP file) to an IIS server.It connects to the target machine(s), extracts the ZIP, and places the files into the correct IIS website folder.
           - task: IISWebAppDeploymentOnMachineGroup@0
             inputs:
               WebSiteName: 'MyDotNetApp'  # <-- REQUIRED
