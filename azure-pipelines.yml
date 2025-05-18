@@ -87,7 +87,6 @@ stages:
               Package: '$(Pipeline.Workspace)\deploy\**\*.zip'
               AdditionalArguments: '-enableRule:AppOffline'
 
-
           # ✅ Manage IIS website (create or update)
           - task: IISWebAppManagementOnMachineGroup@0
             inputs:
