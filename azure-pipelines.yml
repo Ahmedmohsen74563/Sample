@@ -84,6 +84,7 @@ stages:
             inputs:
               WebSiteName: 'MyDotNetApp'  # <-- REQUIRED
               Package: '$(Pipeline.Workspace)\deploy\**\*.zip'
+              AdditionalArguments: '-enableRule:AppOffline'
 
 
           # ✅ Manage IIS website (create or update)
