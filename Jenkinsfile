@@ -1,12 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage("build") {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/Ahmedmohsen74563/Sample.git'
+                echo 'building the application...'
             }
-        }
-        // rest of your stages...
-    }
-}
+        }  
+        stage("test") {
+            steps {
+                echo 'testing the application...'
+            }
+        }  
+        stage("deploy") {
+            steps {
+                echo 'deploying the application...'  
+            }
+        }  
+    }  
+} 
