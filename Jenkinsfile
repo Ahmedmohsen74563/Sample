@@ -26,7 +26,13 @@ pipeline {
 
         stage('Restore Dependencies') {
             steps {
-                bat "dotnet restore ${env.SOLUTION}"
+                powershell '''
+                $projects = Get-ChildItem -Recurse -Filter *.csproj | ForEach-Object { $_.FullName }
+                foreach ($proj in $projects) {
+                    dotnet restore "$proj"
+                }
+                '''
+
             }
         }
 
