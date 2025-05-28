@@ -1,12 +1,5 @@
 pipeline {
-    agent {
-        label 'windows' // Assuming you have Windows agents with this label
-    }
-
-    triggers {
-        pollSCM('H * * * *') // Poll SCM regularly (adjust as needed)
-        // or use GitHub webhooks for push triggers
-    }
+    agent any
 
     environment {
         SOLUTION = '**/*.csproj'
